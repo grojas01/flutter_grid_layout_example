@@ -71,6 +71,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisSpacing: 8.0),
               itemCount: allItems.length,
               itemBuilder: (BuildContext context, int index) =>
+              
+              InkWell(
+              onTap: (){
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => _buildItem(allItems[0])),
+              );
+              },
+              child: _buildItem(allItems[index])
+              ),
+
                   _buildItem(allItems[index]),
             ),
           )
